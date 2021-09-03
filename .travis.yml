@@ -6,6 +6,6 @@ before_install:
   - docker build -t mohit1504/docker-react -f Dockerfile.dev .
   
 script:
-  - docker run mohit1504/docker-react npm run test -- --coverage
+  - docker run -e CI=true mohit1504/docker-react npm run test -- --coverage
   
   
