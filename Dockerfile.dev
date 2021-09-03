@@ -4,11 +4,7 @@ WORKDIR '/app'
 
 COPY package.json .
 RUN npm install
-RUN chown -R node.node /app
-
 
 COPY . .
-RUN chmod 777 node_modules
-CMD ["npm","run","start"]
 
-
+CMD ["npm", "run", "start"]
