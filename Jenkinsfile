@@ -6,7 +6,7 @@ pipeline {
    
      stage('Install Dependencies') { 
         steps { 
-           sh 'docker build -t mohit/docker-react -f Dockerfile.dev .' 
+           sh 'docker build -t mohit/docker-react .' 
         }
      }
      
