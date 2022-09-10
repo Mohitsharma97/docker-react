@@ -12,13 +12,13 @@ pipeline {
      
      stage('Test') { 
         steps { 
-           sh 'docker run -e CI=true mohit/docker-react npm run test'
+           sh 'echo "deploying application..."'
         }
       }
 
          stage("Deploy application") { 
          steps { 
-           sh 'echo "deploying application..."'
+           sh 'docker run mohit/docker-react'
          }
 
      }
