@@ -12,7 +12,7 @@ pipeline {
      
      stage('Test') { 
         steps { 
-           sh 'npm run test'
+           sh 'docker run mohit/docker-react npm run test'
         }
       }
 
