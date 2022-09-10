@@ -6,13 +6,13 @@ pipeline {
    
      stage('Install Dependencies') { 
         steps { 
-           sh 'docker build -t mohit/docker-react -f Dockerfile.dev .' 
+           sh 'npm install' 
         }
      }
      
      stage('Test') { 
         steps { 
-           sh 'echo "testing application..."'
+           sh 'npm run test'
         }
       }
 
